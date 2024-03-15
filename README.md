@@ -8,6 +8,8 @@
 2. 长按capslk只能切换成大写，不能切换成小写。如果要切换成小写，请短按shift
 
 # 使用方法
+## 方法1
 1. 下载
-2. 直接运行win2mac.exe文件
-3. win+r后在运行框内输入%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup，将win2mac.exe文件复制进去,以开机自启
+2. 运行win2mac.exe文件，确保程序运行正常
+3. 按win+r组合键后在运行框内输入shell:startup，并按下回车键
+4. 在弹出的窗口中，将win2mac.exe文件拖入其中即可开机自启
