@@ -22,24 +22,21 @@ Alt::Return
 Shift::Return
 
 CapsLock::
-    KeyWait, CapsLock
-    If (A_TimeSinceThisHotkey > 300)
-    {
-        SetTimer, mainp, -1
-    } else 
-    {
-        Send, {ctrl down}{space}{ctrl up}
-    }
-Return
-
-mainp:
     if GetKeyState("CapsLock", "T")
     {
         SetCapsLockState, Off  ; 如果 CapsLock 键是开启状态，则将其关闭
     }
     else
     {
-        SetCapsLockState, On  ; 如果 CapsLock 键是关闭状态，则将其开启
+        KeyWait, CapsLock
+        If (A_TimeSinceThisHotkey > 300)
+        {
+            SetCapsLockState, On  ; 如果 CapsLock 键是关闭状态，则将其开启
+        }
+        else 
+        {
+            Send, {ctrl down}{space}{ctrl up}
+        }
     }
 Return
 
